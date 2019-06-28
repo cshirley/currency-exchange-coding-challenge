@@ -31,7 +31,7 @@ class CurrencyExchangeTest < Test::Unit::TestCase
 
   def test_no_currency_exchange_for_date_raises_error
     assert_raise CurrencyExchange::RateNotFound do
-      CurrencyExchange.rate(Date.new(1969, 1, 1), 'FOOBAR', 'EUR')
+      CurrencyExchange.rate(Date.new(1969, 1, 1), 'GBP', 'EUR')
     end
   end
 end
