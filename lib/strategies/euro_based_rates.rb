@@ -43,9 +43,9 @@ module CurrencyExchange
       private
 
       def initialize(date:, from_currency:, to_currency:)
-        @date_str = date.strftime('%Y-%m-%d')
-        @from_currency = from_currency.to_s.upcase
-        @to_currency = to_currency.to_s.upcase
+        @date_str = date&.strftime('%Y-%m-%d')
+        @from_currency = from_currency&.to_s&.upcase
+        @to_currency = to_currency&.to_s&.upcase
       end
 
       attr_reader :date_str, :from_currency, :to_currency
